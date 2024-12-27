@@ -1,0 +1,33 @@
+<body>
+    <h1>Ticker:</h1>
+    <form method="POST">
+        <input type="text" name="ticker" placeholder="AAPL" required>
+
+        <label for="strategy">Select Strategy:</label>
+        <select name="strategy" id="strategy">
+            <option value="buy_first_day">Buy on First Day</option>
+            <option value="uptrend">Uptrend</option>
+        </select>
+
+        <br>
+        <label for="time_period">Select Time Period:</label>
+        <input type="radio" id="3_years" name="time_period" value="3" required>
+        <label for="3_years">3 Years</label>
+        <input type="radio" id="10_years" name="time_period" value="10" required>
+        <label for="10_years">10 Years</label><br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if price %}
+        <p>{{ price }}</p>
+    {% endif %}
+
+    {% if strategies %}
+        <h3>{{ strategies }}</h3>
+    {% endif %}
+
+    {% if graph %}
+        <p>{{ graph|safe }}</p>
+    {% endif %}
+</body>
