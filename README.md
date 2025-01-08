@@ -13,8 +13,7 @@ The **Stock Profit Simulator** is a web application that allows users to simulat
 - Required Python packages (specified in requirements.txt):
   - Flask
   - pandas
-  - matplotlib
-  - yfinance
+    
 ### Steps
 1. Clone the repository:
   ```
