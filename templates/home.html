@@ -1,5 +1,6 @@
 <body>
-    <h1>Ticker:</h1>
+    <h1>Stock Profit Simulator</h1>
+    <link rel="stylesheet" href="../static/styles.css">
     <form method="POST">
         <input type="text" name="ticker" placeholder="AAPL" required>
 
@@ -18,6 +19,10 @@
         <br>
         <button type="submit">Submit</button>
     </form>
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
 
     {% if price %}
         <p>{{ price }}</p>
